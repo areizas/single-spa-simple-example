@@ -17,4 +17,16 @@ registerApplication(
   () => true
 );
 
+registerApplication(
+  'angularJS', 
+  () => import ('./src/angularJS/angularJS.app.js'), 
+  pathPrefix('/angularJS')
+);
+
+function pathPrefix(prefix) {
+  return function(location) {
+      return location.pathname.startsWith(prefix);
+  }
+}
+
 start();
