@@ -11,4 +11,10 @@ registerApplication(
     location.pathname.startsWith('/home')
 );
 
+registerApplication(
+  'navBar', 
+  () => import('./src/navBar/navBar.app.js').then(module => module.navBar),
+  () => true
+);
+
 start();
