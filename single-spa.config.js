@@ -23,6 +23,12 @@ registerApplication(
   pathPrefix('/angularJS')
 );
 
+registerApplication(
+  'user', 
+  () => import ('./src/user/user.app.js'), 
+  pathPrefix('/user')
+);
+
 function pathPrefix(prefix) {
   return function(location) {
       return location.pathname.startsWith(prefix);

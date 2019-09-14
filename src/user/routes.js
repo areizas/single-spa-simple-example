@@ -21,6 +21,9 @@ angular
     .state('root.login', {
       url: '/login',
       template: '<login />',
+      controller: 'LoginController',
+      controllerAs: 'vm',
+      title: 'login'
     })
 
 });
